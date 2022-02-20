@@ -17,4 +17,7 @@
 #include <iostream>
 
 
-string vigenereCipher(string original, string keyword, bool encrypt);
+string vigenereCipher(string original, string keyword, bool encrypt){
+    
+    return "";
+}

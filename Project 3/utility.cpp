@@ -13,7 +13,8 @@
 
 #include "utility.h"
 #include <iostream>
-
+#include <string>
+#include <cmath>
 
 string toUpperCase(string original) {
     int size = original.size();
@@ -27,24 +28,50 @@ string toUpperCase(string original) {
 }
 
 string removeNonAlphas(string original) {
-    // TODO: implement
-    
-    // returning a string to avoid compile error
-    return "";
-}
+    int size = original.size();
+         int i = 0;
+        string final;
+         for (i = 0; i < size; ++i){
+           if (((original.at(i) >= 65) && (original.at(i) <= 90) ||
+                (original.at(i) >= 97) && (original.at(i) <= 122))){
+             final += original.at(i);
+           }
+               }
+      return final;
+        }
 
 string removeDuplicate(string original) {
-    // TODO: implement
+        int size = original.size();
+            int i = 0;
+             bool duplicate;
+             char str[size];
+    for (i = 0; i < size; ++i){
+        str[i] = '#';
+    }
+             int temp;
+             string fixed;
+             int j = 0;
+             for (i = 0; i < size; ++i){
+               temp = original.at(i);
+               duplicate = false;
+               for (j = 0; j < size; ++j){
+                   if (temp == str[j]){
+                  duplicate = true;
+                }
+               }
+               if (duplicate == false){
+                 fixed += original.at(i);
+                 str[i] = original.at(i);
+             }
+             }
+             return fixed;
     
-    // returning a string to avoid compile error
-    return "";
 }
 
-int charToInt(char original) {
-    // TODO: implement
-    
-    // returning 0 to avoid compile error
-    return 0;
+int charToInt(char original){
+  int value;
+  value = original - 48;
+  return value;
 }
 
 ////////////////////////////////////////////////////////////////////////////////

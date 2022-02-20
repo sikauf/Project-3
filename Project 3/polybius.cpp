@@ -16,10 +16,21 @@
 #include <string>
 using namespace std;
 
-string mixKey(string key);
+string mixKey(string key){
+    
+    return ""; //FIX
+}
 
-void fillGrid(char grid[SIZE][SIZE], string content);
+void fillGrid(char grid[SIZE][SIZE], string content){
+    
+}
 
-string findInGrid(char c, char grid[SIZE][SIZE]);
+string findInGrid(char c, char grid[SIZE][SIZE]){
+    
+    return ""; //FIX
+}
 
-string polybiusSquare(char grid[SIZE][SIZE], string key, string original, bool encrypt);
+string polybiusSquare(char grid[SIZE][SIZE], string key, string original, bool encrypt){
+    
+    return ""; //FIX
+}
