@@ -2,7 +2,7 @@
  * utility.cpp
  * Project UID e98fd45ccce9d7195e89e6171a5451f2
  *
- * <#Names#>
+ * Sam Kaufman, Jared Klein
  * <#Uniqnames#>
  *
  * EECS 183: Project 3
