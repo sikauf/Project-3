@@ -26,33 +26,34 @@ char shiftAlphaCharacter(char c, int n){
             c += 26;
           }
             return c;
-    } else if (islower(c)){
+    } else {
         int value = n % 26;
+            c -= 26;
             c = c + value;
           if (c > 122){
             c -= 26;
           } else if (c < 97){
+              if (c < 71 ){
+                  c += 26;
+              }
             c += 26;
           }
-            return c;
-        }
-    return c;
+        return c;
+    }
 }
-
+    
 string caesarCipher(string original, int key, bool encrypt){
     if (encrypt == false){
         key *= -1;
     }
     int size = original.size();
-      char str[size];
       int i = 0;
       for (i = 0; i < size; ++i){
-      str[i] = original.at(i);
-    }
-      for (i = 0; i < size; ++i){
+          if (isalpha(original.at(i)) != 0){
         if (original.at(i) != 32){
         original.at(i) = shiftAlphaCharacter(original.at(i), key);
         }
+      }
       }
       return original;
     }

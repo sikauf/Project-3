@@ -17,8 +17,9 @@
 using namespace std;
 
 string mixKey(string key){
-    
-    return ""; //FIX
+    string base = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    string output = key + base;
+    return removeDuplicate(output);
 }
 
 void fillGrid(char grid[SIZE][SIZE], string content){

@@ -16,13 +16,15 @@
 using namespace std;
 
 void testShiftAlphaCharacter(){
-    cout << "Expected: c, Actual: " << shiftAlphaCharacter('a', 2) << endl;
-    cout << "Expected: X, Actual: " << shiftAlphaCharacter('A', -3) << endl;
-    
+    cout << "Expected: f, Actual: " << shiftAlphaCharacter('b', 56) << endl;
+    cout << "Expected: D, Actual: " << shiftAlphaCharacter('T', -42) << endl;
+    cout << "Expected: g, Actual: " << shiftAlphaCharacter('z', 7) << endl;
+    cout << "Expected: F, Actual: " << shiftAlphaCharacter('Y', 7) << endl;
 }
 
 void testToUpperCase(){
     cout << "Expected: APPLE, actual " << toUpperCase("apple") << endl;
+    cout << "Expected: JOHN?!, actual " << toUpperCase("john?!") << endl;
     cout << "Expected: JOHN?!, actual " << toUpperCase("john?!") << endl;
 }
 
@@ -43,10 +45,17 @@ void testCharToInt(){
 
 void testCaesarCipher(){
     cout << "Expected: Spvuz ahrl ihAoz, actual " << caesarCipher("Lions take baThs", 7, true) << endl;
-    cout << "Expected: Mug Liwem!, actual " << caesarCipher("Sam Rocks!", -6, true) << endl;
+    cout << "Expected: Zht huk Qhylk, actual " << caesarCipher("Sam and Jared", 7, true) << endl;
     cout << "Expected: Let's grab pizza?, actual " << caesarCipher("Buj'i whqr fyppq?", 42, false) << endl;
 }
 
+void testMixKey(){
+    cout << endl << mixKey("JELLY") << endl;
+}
+
+void testFillGrid(){
+   
+}
 
 void startTests(){
     testShiftAlphaCharacter();
@@ -55,5 +64,7 @@ void startTests(){
     testRemoveDuplicate();
     testCharToInt();
     testCaesarCipher();
+    testMixKey();
+    testFillGrid();
 }
 
