@@ -14,6 +14,8 @@
 
 #include "polybius.h"
 #include <string>
+#include <iostream>
+
 using namespace std;
 
 string mixKey(string key){
@@ -54,6 +56,34 @@ string findInGrid(char c, char grid[SIZE][SIZE]){
 }
 
 string polybiusSquare(char grid[SIZE][SIZE], string key, string original, bool encrypt){
-    
-    return ""; //FIX
+    string gridString = mixKey(key);
+    string output;
+    fillGrid(grid, gridString);
+    int size = original.size();
+    int i = 0;
+    if (encrypt == true){
+        for (i = 0; i < size; ++i){
+            if (original.at(i) == 32){
+                output += " ";
+            } else {
+                string currChar = findInGrid(original.at(i), grid);
+                output += currChar;
+            }
+        }
+    } else {
+        int across = 0;
+        int down = 0;
+        for (i = 0; i < size; ++i){
+            if (original.at(i) == 32){
+                output += " ";
+            } else {
+                char currChar = charToInt(original.at(i));
+                down = charToInt(original.at(i));
+                across = charToInt(original.at(i + 1));
+                output += gridString.at((down * 6) + across);
+                ++i;
+            }
+        }
+    }
+    return output;
 }

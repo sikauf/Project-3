@@ -65,6 +65,11 @@ void testFindInGrid(){
     cout << "Expected: 21, actual " << findInGrid('N', grid) << endl;
 }
 
+void testPolybiusSquare(){
+    char grid[SIZE][SIZE];
+    cout << polybiusSquare(grid, "POLYBIUS", "15151311 435445 0511 332215 04151133", false) << endl;
+}
+
 void startTests(){
     testShiftAlphaCharacter();
     testToUpperCase();
@@ -75,5 +80,6 @@ void startTests(){
     testMixKey();
     testFillGrid();
     testFindInGrid();
+    testPolybiusSquare();
 }
 
