@@ -54,7 +54,15 @@ void testMixKey(){
 }
 
 void testFillGrid(){
-   
+    char grid[SIZE][SIZE];
+    fillGrid(grid, ALNUM);
+    printGrid(grid);
+}
+
+void testFindInGrid(){
+    char grid[SIZE][SIZE];
+    fillGrid(grid, ALNUM);
+    cout << "Expected: 21, actual " << findInGrid('N', grid) << endl;
 }
 
 void startTests(){
@@ -66,5 +74,6 @@ void startTests(){
     testCaesarCipher();
     testMixKey();
     testFillGrid();
+    testFindInGrid();
 }
 
