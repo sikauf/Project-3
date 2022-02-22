@@ -70,6 +70,11 @@ void testPolybiusSquare(){
     cout << polybiusSquare(grid, "POLYBIUS", "15151311 435445 0511 332215 04151133", false) << endl;
 }
 
+void testVigenereCipher(){
+    cout << vigenereCipher("Attack at dawN:(", "LEMON", true) << endl;
+    cout << vigenereCipher("U lgp'a os qaoxitk iaz ltvcfqq. Teoafoq ckwhtpd riady qh.", "Mischief managed.", false) << endl;
+}
+
 void startTests(){
     testShiftAlphaCharacter();
     testToUpperCase();
@@ -81,5 +86,6 @@ void startTests(){
     testFillGrid();
     testFindInGrid();
     testPolybiusSquare();
+    testVigenereCipher();
 }
 
